@@ -1,0 +1,7 @@
+dist/
+bpf/vmlinux.h
+cmd/agent/monitor_bpfel.go
+cmd/agent/monitor_bpfel.o
+go.sum
+notes.txt
+*.bin
