@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 """
-eRDS — Random Forest ONNX Model Trainer
-GLA University, Mathura · 2026
-
-Trains a two-feature Random Forest classifier on synthetic data:
-  Feature 0: Shannon entropy  (float32, range 0.0 – 8.0)
-  Feature 1: Write size bytes (float32)
 
 Labels:
   0 = Benign   (plain text, structured binaries, logs)
@@ -30,7 +24,6 @@ from skl2onnx import convert_sklearn
 from skl2onnx.common.data_types import FloatTensorType
 
 # ─── 1. Synthetic training data ───────────────────────────────────────────────
-# In production, replace with real telemetry collected by the Go agent.
 
 def generate_data(n_samples: int = 4000, seed: int = 42) -> tuple:
     """
